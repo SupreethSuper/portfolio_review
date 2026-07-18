@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] — Hardware Developer</title>
+  <style>
+    /* ===== STYLE 7: EDITORIAL / MINIMAL (black & white, typography-led, elegant) ===== */
+    :root{
+      --bg:#faf9f7;
+      --text:#141414;
+      --muted:#6b6b6b;
+      --accent:#141414;
+      --line:#dcdad5;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Georgia,"Times New Roman",serif;
+      background:var(--bg);color:var(--text);line-height:1.7;
+    }
+    .sans{font-family:"Segoe UI",Helvetica,Arial,sans-serif}
+    .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+
+    nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:10}
+    nav .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+    nav .logo{font-weight:700;font-size:18px;letter-spacing:.5px}
+    nav a{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted);text-decoration:none;
+      margin-left:26px;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+    nav a:hover{color:var(--text)}
+    .nav-links{display:flex}
+
+    header{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+    .eyebrow{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted);
+      text-transform:uppercase;letter-spacing:3px;font-size:12px}
+    h1{font-size:clamp(38px,7vw,64px);line-height:1.08;margin:20px 0 24px;font-weight:400;letter-spacing:-1px}
+    h1 em{font-style:italic}
+    .subtitle{font-size:21px;color:var(--muted);max-width:600px;font-style:italic}
+    .cta{margin-top:38px;display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+    .link-arrow{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--text);text-decoration:none;
+      font-weight:600;font-size:15px;border-bottom:2px solid var(--text);padding-bottom:3px}
+    .link-arrow:hover{color:var(--muted);border-color:var(--muted)}
+
+    section{padding:64px 0;border-bottom:1px solid var(--line)}
+    .kicker{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted);
+      text-transform:uppercase;letter-spacing:2px;font-size:12px;margin-bottom:14px}
+    h2{font-size:32px;margin-bottom:22px;font-weight:400;letter-spacing:-.5px}
+
+    .skills{font-family:"Segoe UI",Helvetica,Arial,sans-serif;display:flex;flex-wrap:wrap;gap:8px 0}
+    .skill{font-size:15px;color:var(--text);padding:4px 0}
+    .skill:not(:last-child)::after{content:" / ";color:var(--muted);margin:0 12px}
+
+    .project{padding:26px 0;border-top:1px solid var(--line)}
+    .project:first-of-type{border-top:none}
+    .project h3{font-size:24px;margin-bottom:4px;font-weight:400}
+    .project .meta{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--muted);
+      font-size:12px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
+    .project p{color:var(--muted);margin:8px 0;max-width:620px}
+    .project a{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--text);text-decoration:none;
+      font-weight:600;font-size:14px;border-bottom:1px solid var(--text)}
+    .project a:hover{color:var(--muted)}
+
+    .contact-links{display:flex;gap:26px;flex-wrap:wrap;margin-top:6px}
+    .contact-links a{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--text);text-decoration:none;
+      font-weight:600;font-size:16px;border-bottom:2px solid var(--text);padding-bottom:3px}
+    .contact-links a:hover{color:var(--muted);border-color:var(--muted)}
+
+    footer{padding:44px 0;color:var(--muted);font-size:13px;
+      font-family:"Segoe UI",Helvetica,Arial,sans-serif;letter-spacing:.5px}
+    @media(max-width:600px){.nav-links{display:none}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <div class="logo">[Your Name]</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Hardware Developer</div>
+      <h1>[Your Name] designs where <em>hardware</em> meets <em>software</em>.</h1>
+      <p class="subtitle">Embedded systems, PCB design, and firmware — with JavaScript and Node.js. Studying at Arizona State University.</p>
+      <div class="cta">
+        <a class="link-arrow" href="#projects">View the work →</a>
+        <a class="link-arrow" href="#contact">Get in touch →</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="kicker">01 — About</div>
+      <h2>A brief introduction</h2>
+      <p style="max-width:620px;color:var(--muted);font-size:19px">
+        I'm a hardware developer drawn to the place where circuits meet code. I enjoy carrying a project
+        from schematic to soldered prototype and writing the firmware and software that give it life.
+        Currently seeking [internships / roles] to build real hardware. <!-- EDIT ME -->
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="kicker">02 — Skills</div>
+      <h2>Tools &amp; technologies</h2>
+      <div class="skills">
+        <span class="skill">Embedded C</span>
+        <span class="skill">Arduino</span>
+        <span class="skill">Raspberry Pi</span>
+        <span class="skill">PCB Design</span>
+        <span class="skill">Microcontrollers</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">HTML</span>
+        <span class="skill">Soldering</span>
+        <span class="skill">Circuit Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="kicker">03 — Selected Work</div>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>[Your Project Name]</h3>
+        <div class="meta">Hardware · Firmware · Node.js</div>
+        <p>Describe your project: the problem it solves, what you built, and the most interesting technical decision. Numbers and outcomes add credibility.</p>
+        <a href="#" target="_blank">GitHub →</a>&nbsp;&nbsp;&nbsp;
+        <a href="#" target="_blank">Live demo →</a>
+      </div>
+
+      <div class="project">
+        <h3>[Second Project]</h3>
+        <div class="meta">Arduino · Sensors</div>
+        <p>Another project. Delete this block if you only have one project for now.</p>
+        <a href="#" target="_blank">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="kicker">04 — Contact</div>
+      <h2>Let's talk</h2>
+      <div class="contact-links">
+        <a href="mailto:sathrey5@asu.edu">Email</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 [Your Name] · Hosted free</div>
+  </footer>
+
+</body>
+</html>

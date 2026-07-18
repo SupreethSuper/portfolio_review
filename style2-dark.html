@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] — Hardware Developer</title>
+  <style>
+    /* ===== STYLE 2: BOLD & DARK (techy, vibrant accents) ===== */
+    :root{
+      --bg:#0b0e14;
+      --panel:#141924;
+      --text:#e6e9ef;
+      --muted:#8b95a7;
+      --accent:#00e5a0;      /* neon green — change this hex to recolor */
+      --accent2:#6d5efc;     /* purple secondary */
+      --border:#222a38;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);color:var(--text);line-height:1.65;
+      background-image:radial-gradient(circle at 20% 0%,rgba(109,94,252,.12),transparent 45%),
+                       radial-gradient(circle at 90% 20%,rgba(0,229,160,.10),transparent 40%);
+    }
+    .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+    nav{position:sticky;top:0;background:rgba(11,14,20,.8);backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);z-index:10}
+    nav .wrap{display:flex;justify-content:space-between;align-items:center;height:66px}
+    nav .logo{font-weight:800;font-size:18px}
+    nav .logo span{color:var(--accent)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:26px;font-size:15px}
+    nav a:hover{color:var(--accent)}
+    .nav-links{display:flex}
+
+    header{padding:100px 0 80px}
+    .eyebrow{display:inline-block;color:var(--accent);font-weight:700;font-size:13px;
+      letter-spacing:1px;text-transform:uppercase;border:1px solid var(--border);
+      padding:6px 14px;border-radius:999px;background:var(--panel)}
+    h1{font-size:clamp(36px,7vw,62px);line-height:1.05;margin:22px 0 20px;font-weight:800;letter-spacing:-1.5px}
+    h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .subtitle{font-size:20px;color:var(--muted);max-width:640px}
+    .cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:14px 26px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px}
+    .btn-primary{background:var(--accent);color:#04110b;box-shadow:0 0 30px rgba(0,229,160,.35)}
+    .btn-primary:hover{box-shadow:0 0 42px rgba(0,229,160,.55)}
+    .btn-ghost{border:1px solid var(--border);color:var(--text);background:var(--panel)}
+    .btn-ghost:hover{border-color:var(--accent)}
+
+    section{padding:60px 0;border-top:1px solid var(--border)}
+    h2{font-size:30px;margin-bottom:8px;font-weight:800;letter-spacing:-.5px}
+    h2::before{content:"// ";color:var(--accent);font-weight:800}
+    .section-sub{color:var(--muted);margin-bottom:34px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:var(--panel);border:1px solid var(--border);padding:9px 16px;border-radius:8px;font-size:14px;font-weight:600}
+    .skill:hover{border-color:var(--accent);color:var(--accent)}
+
+    .project{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:30px;margin-bottom:20px;transition:.2s}
+    .project:hover{border-color:var(--accent);box-shadow:0 0 40px rgba(0,229,160,.08);transform:translateY(-3px)}
+    .project h3{font-size:22px;margin-bottom:8px}
+    .project .tag{display:inline-block;background:var(--bg);border:1px solid var(--border);color:var(--accent);
+      font-size:12px;padding:4px 11px;border-radius:6px;margin:8px 6px 8px 0;font-weight:600}
+    .project p{color:var(--muted);margin:12px 0}
+    .project a{color:var(--accent);text-decoration:none;font-weight:700;font-size:14px}
+    .project a:hover{text-decoration:underline}
+
+    .contact-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+    .contact-links a{color:var(--text);text-decoration:none;font-weight:600;
+      border:1px solid var(--border);padding:13px 22px;border-radius:12px;background:var(--panel)}
+    .contact-links a:hover{border-color:var(--accent);color:var(--accent)}
+
+    footer{padding:44px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--border);text-align:center}
+    @media(max-width:600px){.nav-links{display:none}}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <div class="logo">[Your<span>Name]</span></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap">
+      <span class="eyebrow">Hardware Developer</span>
+      <h1>I build things that<br><span class="grad">merge silicon and code.</span></h1>
+      <p class="subtitle">Embedded systems, PCB design, and firmware — backed by JavaScript &amp; Node.js. Computer/Electrical Engineering @ Arizona State University.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects">See my work</a>
+        <a class="btn btn-ghost" href="#contact">Contact me</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p class="section-sub">Who I am.</p>
+      <p style="max-width:660px;color:var(--muted)">
+        I'm a hardware developer who loves the moment a circuit comes alive under firmware I wrote.
+        From schematic to soldered prototype to the software that drives it — I like owning the full stack
+        of a physical product. Currently seeking [internships / roles] where I can build real things.
+        <!-- EDIT ME -->
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="section-sub">My toolkit.</p>
+      <div class="skills">
+        <span class="skill">Embedded C</span>
+        <span class="skill">Arduino</span>
+        <span class="skill">Raspberry Pi</span>
+        <span class="skill">PCB Design</span>
+        <span class="skill">Microcontrollers</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">HTML</span>
+        <span class="skill">Soldering</span>
+        <span class="skill">Circuit Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="section-sub">Selected work.</p>
+
+      <div class="project">
+        <h3>[Your Project Name]</h3>
+        <span class="tag">Hardware</span>
+        <span class="tag">Firmware</span>
+        <span class="tag">Node.js</span>
+        <p>
+          Describe your project: the problem, what you built, and the hardest/coolest technical part.
+          Add numbers if you can — they impress recruiters.
+        </p>
+        <a href="#" target="_blank">GitHub →</a>&nbsp;&nbsp;
+        <a href="#" target="_blank">Live demo →</a>
+      </div>
+
+      <div class="project">
+        <h3>[Second Project]</h3>
+        <span class="tag">Arduino</span>
+        <span class="tag">Sensors</span>
+        <p>Another project. Delete this block if you only have one for now.</p>
+        <a href="#" target="_blank">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Let's connect</h2>
+      <p class="section-sub">Open to opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:sathrey5@asu.edu">✉ Email</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 [Your Name]. Built &amp; hosted for free.</div>
+  </footer>
+
+</body>
+</html>
