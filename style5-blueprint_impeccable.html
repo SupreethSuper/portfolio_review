@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] — Hardware Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== STYLE 5: BLUEPRINT / ENGINEERING — impeccable edition ===== */
+    :root{
+      --bg:#0d2b4e;          /* blueprint blue */
+      --panel:#0f3159;
+      --panel-2:#0c2947;
+      --text:#dbe8f5;
+      --muted:#8fb0d0;
+      --accent:#7fd4ff;      /* cyan draft line */
+      --white:#ffffff;
+      --border:#2a5686;
+      --ring:rgba(127,212,255,.45);
+      --ease:cubic-bezier(.22,.61,.36,1);
+      --sp:clamp(52px,8vw,78px);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"IBM Plex Mono",ui-monospace,"Consolas",monospace;
+      background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;
+      background-image:
+        linear-gradient(rgba(127,212,255,.09) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(127,212,255,.09) 1px,transparent 1px),
+        linear-gradient(rgba(127,212,255,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(127,212,255,.045) 1px,transparent 1px);
+      background-size:100px 100px,100px 100px,20px 20px,20px 20px;
+      background-attachment:fixed;
+    }
+    .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+    ::selection{background:var(--accent);color:#062038}
+    a:focus-visible,.btn:focus-visible{outline:none;box-shadow:0 0 0 3px var(--ring);border-radius:2px}
+
+    nav{border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(13,43,78,.92);
+      backdrop-filter:blur(6px);z-index:10}
+    nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+    nav .logo{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:1px;color:var(--white)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:13px;letter-spacing:.5px;
+      text-transform:uppercase;transition:color .2s var(--ease)}
+    nav a:hover{color:var(--accent)}
+    .nav-links{display:flex}
+
+    header{padding:clamp(70px,11vw,100px) 0 var(--sp);position:relative}
+    .eyebrow{color:var(--accent);letter-spacing:3px;text-transform:uppercase;font-size:12px}
+    .eyebrow::before{content:"◈ "}
+    h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(34px,6.2vw,54px);line-height:1.08;margin:16px 0;
+      font-weight:700;color:var(--white);letter-spacing:-.02em}
+    .subtitle{font-size:clamp(17px,2.3vw,20px);color:var(--muted);max-width:640px}
+    .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:14px 26px;text-decoration:none;font-weight:600;font-size:13px;
+      letter-spacing:.6px;text-transform:uppercase;border-radius:2px;
+      transition:transform .18s var(--ease),background .2s var(--ease),box-shadow .22s var(--ease)}
+    .btn-primary{background:var(--accent);color:#062038}
+    .btn-primary:hover{background:var(--white);transform:translateY(-2px);box-shadow:0 8px 22px -10px rgba(127,212,255,.7)}
+    .btn-ghost{border:1px solid var(--accent);color:var(--accent)}
+    .btn-ghost:hover{background:rgba(127,212,255,.14);transform:translateY(-2px)}
+
+    section{padding:var(--sp) 0;border-top:1px solid var(--border)}
+    h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(24px,3.2vw,28px);margin-bottom:6px;color:var(--white);letter-spacing:.5px}
+    h2::before{content:"[ ";color:var(--accent)}
+    h2::after{content:" ]";color:var(--accent)}
+    .section-sub{color:var(--muted);margin-bottom:30px;font-size:13px;letter-spacing:1px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{border:1px solid var(--border);padding:9px 15px;font-size:13px;color:var(--text);
+      background:var(--panel);letter-spacing:.5px;transition:border-color .2s var(--ease),color .2s var(--ease),transform .18s var(--ease)}
+    .skill:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+    .project{border:1px solid var(--border);padding:28px;margin-bottom:18px;background:var(--panel);position:relative;
+      transition:border-color .24s var(--ease),box-shadow .24s var(--ease),transform .24s var(--ease)}
+    .project::before,.project::after{content:"";position:absolute;width:12px;height:12px;border:2px solid var(--accent);
+      transition:width .24s var(--ease),height .24s var(--ease)}
+    .project::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+    .project::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+    .project:hover{border-color:var(--accent);box-shadow:0 16px 40px -20px rgba(127,212,255,.4);transform:translateY(-3px)}
+    .project:hover::before,.project:hover::after{width:20px;height:20px}
+    .project h3{font-family:"Space Grotesk",sans-serif;font-size:20px;margin-bottom:6px;color:var(--white)}
+    .project .tag{display:inline-block;border:1px solid var(--border);color:var(--accent);
+      font-size:11px;padding:4px 10px;margin:8px 6px 8px 0;letter-spacing:.5px;text-transform:uppercase}
+    .project p{color:var(--muted);margin:10px 0 4px}
+    .project a{color:var(--accent);text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.5px;transition:opacity .2s var(--ease)}
+    .project a:hover{text-decoration:underline;text-underline-offset:3px}
+
+    .contact-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+    .contact-links a{color:var(--text);text-decoration:none;font-weight:600;border:1px solid var(--border);
+      padding:13px 24px;background:var(--panel);letter-spacing:.5px;text-transform:uppercase;font-size:13px;
+      transition:border-color .2s var(--ease),color .2s var(--ease),transform .18s var(--ease)}
+    .contact-links a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+    footer{padding:42px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--border);
+      display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;letter-spacing:.5px}
+
+    [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+    [data-reveal].in{opacity:1;transform:none}
+
+    @media(max-width:600px){.nav-links{display:none}}
+    @media(prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important}
+      [data-reveal]{opacity:1;transform:none;transition:none}
+      .btn,.project,.skill,.contact-links a{transition:none}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <div class="logo">[YOUR NAME]</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap" data-reveal>
+      <div class="eyebrow">Hardware Developer</div>
+      <h1>[Your Name]</h1>
+      <p class="subtitle">Designing at the intersection of circuits and code — embedded systems, PCB design, and firmware, with JavaScript &amp; Node.js. Engineering student @ Arizona State University.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects">View Schematics</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap" data-reveal>
+      <h2>About</h2>
+      <p class="section-sub">SPEC SHEET</p>
+      <p style="max-width:640px;color:var(--muted)">
+        Hardware developer focused on embedded systems and the software that brings them to life.
+        From schematic capture to soldered prototype to firmware, I like owning the whole board.
+        Currently seeking [internships / roles] to build real hardware. <!-- EDIT ME -->
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap" data-reveal>
+      <h2>Skills</h2>
+      <p class="section-sub">BILL OF MATERIALS</p>
+      <div class="skills">
+        <span class="skill">Embedded C</span>
+        <span class="skill">Arduino</span>
+        <span class="skill">Raspberry Pi</span>
+        <span class="skill">PCB Design</span>
+        <span class="skill">Microcontrollers</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">HTML</span>
+        <span class="skill">Soldering</span>
+        <span class="skill">Circuit Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap" data-reveal>
+      <h2>Projects</h2>
+      <p class="section-sub">BUILD LOG</p>
+
+      <div class="project">
+        <h3>[Your Project Name]</h3>
+        <span class="tag">Hardware</span>
+        <span class="tag">Firmware</span>
+        <span class="tag">Node.js</span>
+        <p>Describe the problem, what you built, and the toughest engineering detail. Include specs/results.</p>
+        <a href="#" target="_blank">GitHub →</a>&nbsp;&nbsp;
+        <a href="#" target="_blank">Demo →</a>
+      </div>
+
+      <div class="project">
+        <h3>[Second Project]</h3>
+        <span class="tag">Arduino</span>
+        <span class="tag">Sensors</span>
+        <p>Another build. Delete this block if you only have one project right now.</p>
+        <a href="#" target="_blank">Details →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap" data-reveal>
+      <h2>Contact</h2>
+      <p class="section-sub">GET IN TOUCH</p>
+      <div class="contact-links">
+        <a href="mailto:sathrey5@asu.edu">Email</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap"><span>© 2026 [YOUR NAME]</span><span>SHEET 1 OF 1 · REV A · HOSTED FREE</span></div>
+  </footer>
+
+  <script>
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  </script>
+
+</body>
+</html>
